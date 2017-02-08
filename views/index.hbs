@@ -3,14 +3,9 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
 
-<form action=api/getvideo/ method="get">
+<form action='http://127.0.0.1:3000/video' method="get">
 
 Pitch GUID : <input type="text" name="id"> <input type="submit" value="Get Video">
 
 
 </form>
-
-<video width="400" controls autoplay>
-<source src={{videoURL}} type="video/mp4">
-
-</video>
