@@ -12,7 +12,7 @@ router.get("/getvideo/:id",function (req,res) {
   Video.find({'_id':id},function(err,doc){
   if(err) {return handleError(err);}
   else {
-    res.status(200).json(doc)
+    res.status(200).json(doc);
   }
 
 

@@ -8,9 +8,12 @@ var mongoose = require("mongoose");
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var videoAPI = require('./api/videoAPI')
-var video = require ('./routes/video')
+var video = require ('./routes/video');
 
+// API dependencies ///
+var videoAPI = require('./api/videoAPI');
+var playerAPI = require('./api/playerAPI');
+var gameAPI = require('./api/gameAPI');
 
 
 var app = express();
@@ -32,8 +35,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/api', videoAPI);
 app.use('/video', video);
+
+/// API dependencies ///
+app.use('/api', videoAPI);
+app.use('/api', playerAPI);
+app.use('/api', gameAPI);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
