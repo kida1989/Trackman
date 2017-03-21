@@ -18,7 +18,6 @@ var gameSchema = new Schema ({
   HomeTeamRoster:Array,
   AwayTeamRoster:Array,
   State:{Status:String,IsComplete:Boolean,IsVerified:Boolean,HasIssues:Boolean,IsEditing:Boolean,HasBadBreaks:Boolean,ErrorDescription:String,StartTime:String,LocalStartTime:String,CompleteTime:String,LocalCompleteTime:String,StatCalculated:Boolean},
-  PlayState: Object,
   PlayCount:Number,
   GameLevel:{Id:String,Name:String},
   League:{Id:String,Name:String},
